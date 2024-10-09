@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            padding: 10px;
+            margin: 20px;
+            height: 450px;
+            width: 250px;
+            position: center;
+            background-color: rgb(94, 155, 192);
+            border-radius: 15px;
+        }
+
+        .box {
+            border: 2px solid black;
+            height: auto;
+
+        }
+
+        img {
+            height: 150px;
+            width: 180px;
+            margin: 10px;
+            padding: 18px;
+            border: 2px solid rgb(43, 50, 68);
+            border-radius: 15px;
+
+        }
+
+        button {
+            margin-left: 55px;
+            border: 1px slateblue;
+            border-radius: 5px;
+            height: 30px;
+            width: 40px;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            padding: 6px;
+
+
+        }
+
+        .more-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <a>Home</a>
+            <a>About</a>
+            <a>Contacts</a>
+        </ul>
+    </nav>
+
+    <div class="box">
+        <img src="Designer.png">
+        <h1>AgriRent</h1>
+        <button>View</button>
+        <button>Order</button>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non saepe minus possimus nobis tempore. Repellendus
+            optio natus alias vitae veritatis vel ex quo. Debitis, earum quia aspernatur, recusandae dolorem, nam error
+            qui amet quos vel excepturi officia ipsum numquam? Rem
+            <span class="more-content">laborum nisi aliquid eligendi corporis eius quisquam
+                recusandae magni aspernatur!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non saepe minus
+                possimus nobis tempore. Repellend optio natus alias vitae veritatis vel ex quo. Debitis, earum quia
+                aspernatur, recusandae dolorem, nam errorqui amet quos vel excepturi officia ipsum numquam? Rem laborum
+                nisi aliquid eligendi corporis eius quisquamrecusandae magni aspernatur!</span>
+        </p>
+        <button onclick="toggleReadMore()" id="readMoreBtn">Read More</button>
+        <script>
+            function toggleReadMore() {
+                var moreText = document.querySelector('.more-content');
+                var btnText = document.getElementById('readMoreBtn');
+
+                if (moreText.style.display === "none") {
+                    moreText.style.display = "block";
+                    btnText.innerHTML = "Read Less";
+                } else {
+                    moreText.style.display = "none";
+                    btnText.innerHTML = "Read More";
+                }
+            }
+        </script>
+
+    </div>
+
+
+</body>
+
+</html>
